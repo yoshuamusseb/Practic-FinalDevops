@@ -2,51 +2,89 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hola Mundo</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hola Mundo - DevOps</title>
     <style>
-        * {
+        body {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            height: 100vh;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
+            background: radial-gradient(circle at top left, #e0c3fc, #8ec5fc);
             display: flex;
             justify-content: center;
             align-items: center;
-            color: white;
-            text-align: center;
+            min-height: 100vh;
+            color: #333;
         }
 
-        .card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
+        .container {
+            background: white;
+            padding: 50px;
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            max-width: 600px;
+            text-align: center;
         }
 
         h1 {
             font-size: 3rem;
+            color: #6a00f4;
             margin-bottom: 10px;
+            position: relative;
+        }
+
+        h1::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #6a00f4;
+            margin: 10px auto 0;
+            border-radius: 2px;
         }
 
         p {
             font-size: 1.2rem;
-            opacity: 0.9;
+            margin: 20px 0;
+            color: #555;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #6a00f4;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s ease;
+            box-shadow: 0 4px 14px rgba(106, 0, 244, 0.4);
+        }
+
+        .btn:hover {
+            background: #4a00c4;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 30px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="card">
-        <h1>¡Hola Mundo! 👋</h1>
-        <p>Bienvenido a mi proyecto final de DevOps CI/CD 💻🚀</p>
+    <div class="container">
+        <h1>¡Hola Mundo!</h1>
+        <p>Esta página ha sido desarrollada como parte del proyecto final de DevOps CI/CD. Incluye integración de HTML,
+            pruebas automatizadas, Docker y GitHub Actions.</p>
+        <a class="btn" href="https://github.com/yoshuamusseb/Practic-FinalDevops" target="_blank">Ver repositorio</a>
     </div>
 </body>
 
